@@ -13,14 +13,14 @@ p {
 /* Navbar Section */
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(27, 25, 25, 0.8);
   backdrop-filter: blur(0.5rem);
 }
 
 .dropdown-menu {
   border: none;
   background-color: transparent;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(27, 25, 25, 0.8);
   backdrop-filter: blur(0.5rem);
 }
 
@@ -75,8 +75,37 @@ p {
   background-color: rgb(97, 111, 57);
 }
 
+.card {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgb(27, 25, 25);
+}
+
 .card img {
   width: 100%;
+}
+
+.card-body {
+  color: rgb(255, 255, 255);
+  background-color: rgb(27, 25, 25);
+}
+
+.card-info {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background-color: rgba(27, 25, 25, 0.2);
+  backdrop-filter: blur(1rem);
+  padding: 1rem;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.card:hover .card-info {
+  transform: translateY(0);
 }
 
 /* About Section */
@@ -98,7 +127,7 @@ p {
 /* Footer Section */
 
 footer {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(27, 25, 25);
   height: 5rem;
   display: flex;
 }
@@ -146,7 +175,7 @@ footer .container {
     margin-top: 1.5rem;
   }
 
-  .services .card {
+  .card {
     margin-bottom: 1.5rem;
   }
 }
