@@ -96,7 +96,6 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 50%;
   background-color: rgba(27, 25, 25, 0.2);
   backdrop-filter: blur(1rem);
   padding: 1rem;
@@ -106,6 +105,131 @@ p {
 
 .card:hover .card-info {
   transform: translateY(0);
+}
+
+/* Gallery Section */
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 15px;
+  grid-template-areas: 
+                      'img-1 img-2 img-3 img-3'
+                      'img-1 img-4 img-5 img-6'
+                      'img-7 img-7 img-8 img-6'
+                      'img-9 img-10 img-11 img-11'
+                      'img-9 img-12 img-12 img-13';
+}
+
+.image-gallery a {
+  width: 100%;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-gallery a ion-icon {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 30px;
+  position: relative;
+  z-index: 1;
+  padding: 10px 30px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.image-gallery a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(27, 25, 25, 0.5);
+  backdrop-filter: blur(0.5rem);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.image-gallery a:hover ion-icon,
+.image-gallery a:hover::before {
+  opacity: 1;
+}
+
+.img-1 {
+  grid-area: img-1;
+  min-height: 515px;
+  background-image: url(img/gallery/apple.jpg);
+}
+
+.img-2 {
+  grid-area: img-2;
+  background-image: url(img/gallery/blueberry.jpg);
+}
+
+.img-3 {
+  grid-area: img-3;
+  background-image: url(img/gallery/cherry.jpg);
+}
+
+.img-4 {
+  grid-area: img-4;
+  background-image: url(img/gallery/corn.jpg);
+}
+
+.img-5 {
+  grid-area: img-5;
+  background-image: url(img/gallery/grape.jpg);
+}
+
+.img-6 {
+  grid-area: img-6;
+  min-height: 515px;
+  background-image: url(img/gallery/orange.jpg);
+}
+
+.img-7 {
+  grid-area: img-7;
+  background-image: url(img/gallery/peach.jpg);
+}
+
+.img-8 {
+  grid-area: img-8;
+  background-image: url(img/gallery/potato.jpg);
+}
+
+.img-9 {
+  grid-area: img-9;
+  min-height: 515px;
+  background-image: url(img/gallery/raspberry.jpg);
+}
+
+.img-10 {
+  grid-area: img-10;
+  background-image: url(img/gallery/sonybean.jpg);
+}
+
+.img-11 {
+  grid-area: img-11;
+  background-image: url(img/gallery/squash.jpg);
+}
+
+.img-12 {
+  grid-area: img-12;
+  background-image: url(img/gallery/strawberry.jpg);
+}
+
+.img-13 {
+  grid-area: img-13;
+  background-image: url(img/gallery/tomato.jpg);
 }
 
 /* About Section */
@@ -164,18 +288,74 @@ footer .container {
   .jumbotron-content {
     width: 80%;
   }
-}
-
-@media screen and (max-width: 576px) {
-  .jumbotron-content {
-    width: 100%;
-  }
 
   .mission-info {
     margin-top: 1.5rem;
   }
 
   .card {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .image-gallery {
+    grid-template-areas: 
+                      'img-1 img-1 img-2 img-2'
+                      'img-1 img-1 img-3 img-3'
+                      'img-4 img-4 img-5 img-5'
+                      'img-6 img-6 img-7 img-7'
+                      'img-8 img-8 img-7 img-7'
+                      'img-9 img-10 img-10 img-10'
+                      'img-11 img-11 img-11 img-12'
+                      'img-13 img-13 img-13 img-13';
+  }
+
+  .image-gallery a {
+    height: 200px;
+  }
+
+  .img-1,
+  .img-7 {
+    min-height: 415px;
+  }
+
+  .img-6,
+  .img-9 {
+    min-height: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .jumbotron-content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-gallery {
+    grid-template-areas: 
+                      'img-1 img-1 img-1 img-1'
+                      'img-2 img-2 img-2 img-2'
+                      'img-3 img-3 img-3 img-3'
+                      'img-4 img-4 img-4 img-4'
+                      'img-5 img-5 img-5 img-5'
+                      'img-6 img-6 img-6 img-6'
+                      'img-7 img-7 img-7 img-7'
+                      'img-8 img-8 img-8 img-8'
+                      'img-9 img-9 img-9 img-9'
+                      'img-10 img-10 img-10 img-10'
+                      'img-11 img-11 img-11 img-11'
+                      'img-12 img-12 img-12 img-12'
+                      'img-13 img-13 img-13 img-13';
+  }
+
+  .image-gallery a {
+    height: 200px;
+  }
+
+  .img-1,
+  .img-7,
+  .img-6,
+  .img-9 {
+    min-height: 0;
   }
 }
