@@ -16,11 +16,13 @@ def load_model():
 
 #function to cast numeric label back to wordish prediction
 def cast_label(prediction):
+    result = np.argmax(prediction)
+
     with open('labelEncoder_dict.json', 'r') as file:
         labels = json.load(file)
 
     for key, value in labels.items():
-        if str(prediction) == value:
+        if str(result) == value:
             return key
 
 #normalize the input range
@@ -88,7 +90,6 @@ def print_main_menu():
 
     if choice == 1:
         user_input = show_input_form()
-        print(user_input)
         np_user_input_scaled = normalization(user_input)
         prediction = model.predict(np_user_input_scaled)
         result = cast_label(prediction)
@@ -111,12 +112,6 @@ if __name__ == "__main__":
     print_main_menu()
         
 
-# random samples picking
-# test_pred = normalization([[108,22,46,26.17668721,86.72952049999998,6.121168559,53.33484977]])
-# test_pred2 = normalization([[90,42,43,20.87974371,82.00274423,6.502985292000001,202.9355362]]) -> should predict "rice"
-# test_pred3 = normalization([[24,140,205,12.087022,83.59398734,5.93202852,68.66813363]])
-
-# prediction = model.predict(test_pred)
-# prediction2 = model.predict(test_pred2)
-# prediction3 = model.predict(test_pred3)
+# TEST DATA -> should predict "rice"
+# test_pred = [[90,42,43,20.87974371,82.00274423,6.502985292000001,202.9355362]]
 
