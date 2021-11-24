@@ -1,0 +1,58 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.mt-6 {
+  margin-top: 5rem;
+}
+
+.pb-6 {
+  padding-bottom: 5rem;
+}
+
+/* Navbar Section */
+
+.navbar {
+  background-color: rgb(27, 25, 25);
+}
+
+.dropdown-menu {
+  border: none;
+  background-color: transparent;
+  background-color: rgb(27, 25, 25);
+}
+
+.dropdown-item {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.dropdown-item:hover {
+  color: rgba(255, 255, 255, 0.75);
+  background-color: transparent;
+}
+
+/* Crop Disease Section */
+
+.crop-disease {
+  padding: 3rem 0;
+}
+
+/* Footer Section */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: rgb(27, 25, 25);
+  display: flex;
+}
+
+.footer .container {
+  margin: auto;
+}

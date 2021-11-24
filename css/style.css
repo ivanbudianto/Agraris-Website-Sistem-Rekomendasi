@@ -13,18 +13,17 @@ p {
 .pb-6 {
   padding-bottom: 5rem;
 }
+
 /* Navbar Section */
 
 .navbar {
-  background-color: rgba(27, 25, 25, 0.8);
-  backdrop-filter: blur(0.5rem);
+  background-color: rgb(27, 25, 25);
 }
 
 .dropdown-menu {
   border: none;
   background-color: transparent;
-  background-color: rgba(27, 25, 25, 0.8);
-  backdrop-filter: blur(0.5rem);
+  background-color: rgb(27, 25, 25);
 }
 
 .dropdown-item {
@@ -39,7 +38,7 @@ p {
 /* Jumbotron Section */
 
 .jumbotron {
-  background-image: url(img/jumbotron.jpg);
+  background-image: url(../img/jumbotron.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -175,75 +174,75 @@ p {
 .img-1 {
   grid-area: img-1;
   min-height: 515px;
-  background-image: url(img/gallery/apple.jpg);
+  background-image: url(../img/gallery/apple.jpg);
 }
 
 .img-2 {
   grid-area: img-2;
-  background-image: url(img/gallery/blueberry.jpg);
+  background-image: url(../img/gallery/blueberry.jpg);
 }
 
 .img-3 {
   grid-area: img-3;
-  background-image: url(img/gallery/cherry.jpg);
+  background-image: url(../img/gallery/cherry.jpg);
 }
 
 .img-4 {
   grid-area: img-4;
-  background-image: url(img/gallery/corn.jpg);
+  background-image: url(../img/gallery/corn.jpg);
 }
 
 .img-5 {
   grid-area: img-5;
-  background-image: url(img/gallery/grape.jpg);
+  background-image: url(../img/gallery/grape.jpg);
 }
 
 .img-6 {
   grid-area: img-6;
   min-height: 515px;
-  background-image: url(img/gallery/orange.jpg);
+  background-image: url(../img/gallery/orange.jpg);
 }
 
 .img-7 {
   grid-area: img-7;
-  background-image: url(img/gallery/peach.jpg);
+  background-image: url(../img/gallery/peach.jpg);
 }
 
 .img-8 {
   grid-area: img-8;
-  background-image: url(img/gallery/potato.jpg);
+  background-image: url(../img/gallery/potato.jpg);
 }
 
 .img-9 {
   grid-area: img-9;
   min-height: 515px;
-  background-image: url(img/gallery/raspberry.jpg);
+  background-image: url(../img/gallery/raspberry.jpg);
 }
 
 .img-10 {
   grid-area: img-10;
-  background-image: url(img/gallery/sonybean.jpg);
+  background-image: url(../img/gallery/sonybean.jpg);
 }
 
 .img-11 {
   grid-area: img-11;
-  background-image: url(img/gallery/squash.jpg);
+  background-image: url(../img/gallery/squash.jpg);
 }
 
 .img-12 {
   grid-area: img-12;
-  background-image: url(img/gallery/strawberry.jpg);
+  background-image: url(../img/gallery/strawberry.jpg);
 }
 
 .img-13 {
   grid-area: img-13;
-  background-image: url(img/gallery/tomato.jpg);
+  background-image: url(../img/gallery/tomato.jpg);
 }
 
 /* Feedback Section */
 
 .feedback {
-  background-image: url(img/feedback.jpg);
+  background-image: url(../img/feedback.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -265,8 +264,8 @@ p {
 /* Footer Section */
 
 .footer {
-  background-color: rgb(27, 25, 25);
   height: 5rem;
+  background-color: rgb(27, 25, 25);
   display: flex;
 }
 
