@@ -10,6 +10,9 @@ p {
   margin-top: 5rem;
 }
 
+.pb-6 {
+  padding-bottom: 5rem;
+}
 /* Navbar Section */
 
 .navbar {
@@ -59,8 +62,9 @@ p {
 
 .mission,
 .services,
-.gallery {
-  padding: 5rem 0;
+.gallery,
+.feedback {
+  padding: 3rem 0;
 }
 
 /* Mission Section */
@@ -96,11 +100,15 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(27, 25, 25, 0.2);
+  height: 50%;
+  background-color: rgba(27, 25, 25, 0.5);
   backdrop-filter: blur(1rem);
   padding: 1rem;
   transform: translateY(101%);
   transition: transform 0.3s ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card:hover .card-info {
@@ -232,31 +240,37 @@ p {
   background-image: url(img/gallery/tomato.jpg);
 }
 
-/* About Section */
+/* Feedback Section */
 
-.about {
-  background-image: url(img/about.jpg);
+.feedback {
+  background-image: url(img/feedback.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 18rem;
-  display: flex;
 }
 
-.about .container {
-  margin: auto;
+.feedback-quote {
+  height: 6rem;
+}
+
+.blockquote i {
+  margin-right: 10px;
+}
+
+.blockquote-footer {
+  color: rgb(255, 255, 255);
 }
 
 /* Footer Section */
 
-footer {
+.footer {
   background-color: rgb(27, 25, 25);
   height: 5rem;
   display: flex;
 }
 
-footer .container {
+.footer .container {
   margin: auto;
 }
 
@@ -284,7 +298,7 @@ footer .container {
 
 /* Responsive Breakpoint */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .jumbotron-content {
     width: 80%;
   }
@@ -328,9 +342,13 @@ footer .container {
   .jumbotron-content {
     width: 100%;
   }
+
+  .feedback-quote {
+    height: 12rem;
+  }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 414px) {
   .image-gallery {
     grid-template-areas: 
                       'img-1 img-1 img-1 img-1'
