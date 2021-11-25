@@ -43,7 +43,7 @@
               Services
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="crop.html#crop-recommendation">Crop</a></li>
+              <li><a class="dropdown-item" href="recom.html#crop-recom">Crop</a></li>
               <li><a class="dropdown-item" href="#crop-disease">Disease</a></li>
             </ul>
           </li>
@@ -57,13 +57,30 @@
   <!-- Navbar End -->
 
   <!-- Crop Disease Section Begin -->
-  <section class="crop-disease" id="#crop-disease">
+  <section class="crop-disease text-white" id="#crop-disease">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="title text-center">
             <h3 class="fw-bold">Crop Disease</h3>
+            <img src="https://bootstrapious.com/i/snippets/sn-img-upload/image.svg" alt="" width="150" class="mt-6">
           </div>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-6 mx-auto">
+          <form method="post" enctype="multipart/form-data">
+            <div class="input-group mb-4 p-2 rounded-pill bg-white shadow-sm">
+              <input id="upload" type="file" onchange="readURL(this);" class="form-control">
+              <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+              <div class="input-group-append">
+                <label for="upload" class="btn btn-light rounded-pill"><i class="fas fa-cloud-upload-alt text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+              </div>
+            </div>
+            <p class="fst-italic text-center">The image uploaded will be rendered inside the box below.</p>
+            <div class="image-area my-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+            <button type="submit" class="btn btn-light">Predict</button>
+          </form>
         </div>
       </div>
     </div>
@@ -84,11 +101,55 @@
   </footer>
   <!-- Footer End -->
 
+  <!-- Scroll to Top Section Begin -->
+  <button class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  <!-- Scroll to Top End -->
+
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script>
+    // Show upload image
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+          $('#imageResult')
+            .attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $(function () {
+      $('#upload').on('change', function() {
+        readURL(input);
+      })
+    })
+
+    // Show upload image name
+    const input = document.getElementById('upload');
+    const infoArea = document.getElementById('upload-label');
+
+    input.addEventListener('change', showFileName);
+    function showFileName(event) {
+      var input = event.srcElement;
+      var fileName = input.files[0].name;
+      infoArea.textContent = 'File name: ' + fileName;
+    }
+
+    // Scroll to Top
+    const scrollToTop = document.querySelector('.scroll-to-top');
+
+    scrollToTop.addEventListener('click', function() {
+      window.scrollTo(0, 0);
+    }) 
+  </script>
 </body>
 </html>
