@@ -1,4 +1,4 @@
-# Modelling Crop Recommendation
+# Modelling Plant Disease
 
 ### Attention: Unzip the model before starting the testing files!
 
