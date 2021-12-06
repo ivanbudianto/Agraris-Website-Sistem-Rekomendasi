@@ -10,7 +10,7 @@
 
   <!-- Style -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/recommend.css">
+  <link rel="stylesheet" href="css/recommend-predict.css">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -20,9 +20,6 @@
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/9af64d2009.js" crossorigin="anonymous"></script>
-
-  <!-- City Script -->
-  <script src="js/city.js"></script>
 </head>
 <body>
   <!-- Navbar Section Begin -->
@@ -47,7 +44,7 @@
               Services
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="recommend.html">Recommend</a></li>
+              <li><a class="dropdown-item" href="recommend.html">Recommmend</a></li>
               <li><a class="dropdown-item" href="disease.html">Disease</a></li>
             </ul>
           </li>
@@ -60,57 +57,29 @@
   </nav>
   <!-- Navbar End -->
 
-  <!-- Crop Recommendation Section Begin -->
-  <section class="crop-recommend text-black">
+  <!-- Predict Crop Recommendation Section Begin -->
+  <section class="predict-crop-recommendation text-black">
     <div class="container">
-      <div class="row">
+      <div class="row row justify-content-center">
         <div class="col-lg-12">
           <div class="title text-center">
             <h3 class="fw-bold">Crop Recommendation</h3>
           </div>
         </div>
       </div>
-      <div class="row justify-content-center mt-5">
-        <div class="col-lg-6 mx-auto">
-          <form action="#" method="POST">
-            <div class="form-group mb-4">
-              <label for="nitrogen">Nitrogen</label>
-              <input type="number" name="nitrogen" id="nitrogen" class="form-control" placeholder="Enter the value" required>
-            </div>
-            <div class="form-group mb-4">
-              <label for="phosphorous">Phosphorous</label>
-              <input type="number" name="phosphorous" id="phosphorous" class="form-control" placeholder="Enter the value" required>
-            </div>
-            <div class="form-group mb-4">
-              <label for="potassium">Potassium</label>
-              <input type="number" name="potassium" id="potassium" class="form-control" placeholder="Enter the value" required>
-            </div>
-            <div class="form-group mb-4">
-              <label for="province">Province</label>
-              <select  onchange="print_city('city', this.selectedIndex);" name="province" id="province" class="form-select" required></select>
-            </div>
-            <div class="form-group mb-4">
-              <label for="city">City</label>
-              <select name="city" id="city" class="form-select" required></select>
-              <script type="text/javascript" language="javascript">
-                print_province("province");
-              </script>
-            </div>
-            <div class="form-group mb-4">
-              <label for="ph">ph</label>
-              <input type="number" name="ph" id="ph" class="form-control" placeholder="Enter the value" required>
-            </div>
-            <div class="form-group mb-4">
-              <label for="rainfall">Rainfall</label>
-              <input type="number" name="rainfall" id="rainfall" class="form-control" placeholder="Enter the value" required>
-            </div>
-            <button type="submit" class="btn btn-dark">Predict</button>
-          </form>
+      <div class="row justify-content-center text-center mt-5">
+        <div class="col-lg-6">
+          <div class="predict-info">
+            <h5 class="fw-normal">Lorem ipsum dolor sit amet <span class="fw-bold">prediction</span> consectetur adipisicing elit nostrum eius.</h5>
+          </div>
+          <a class="text-decoration-none" href="recommend.html">
+            <button type="button" class="btn btn-dark mt-4">Back</button>
+          </a>
         </div>
       </div>
     </div>
   </section>
-  <!-- Crop Recommendation End -->
+  <!-- Predict Crop Recommendation End -->
 
   <!-- Footer Section Begin -->
   <footer class="footer text-white">
