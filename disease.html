@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agraris</title>
+  <title>Agraris - Crop Disease</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-  <!-- My CSS -->
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/disease.css">
 
   <!-- Google Fonts -->
@@ -20,7 +21,7 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/9af64d2009.js" crossorigin="anonymous"></script>
 </head>
-<body id="home">
+<body>
   <!-- Navbar Section Begin -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
@@ -33,22 +34,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html#home">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#mission">Mission</a>
+            <a class="nav-link" href="#mission">Mission</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#services" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Services
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="recom.html#crop-recom">Crop</a></li>
-              <li><a class="dropdown-item" href="#crop-disease">Disease</a></li>
+              <li><a class="dropdown-item" href="recommend.html">Recommend</a></li>
+              <li><a class="dropdown-item" href="disease.html">Disease</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#gallery">Gallery</a>
+            <a class="nav-link" href="#gallery">Gallery</a>
           </li>
         </ul>
       </div>
@@ -57,29 +58,29 @@
   <!-- Navbar End -->
 
   <!-- Crop Disease Section Begin -->
-  <section class="crop-disease text-white" id="#crop-disease">
+  <section class="crop-disease text-black">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="title text-center">
             <h3 class="fw-bold">Crop Disease</h3>
-            <img src="https://bootstrapious.com/i/snippets/sn-img-upload/image.svg" alt="" width="150" class="mt-6">
+            <img src="img/image.svg" alt="" width="150" class="mt-5">
           </div>
         </div>
       </div>
       <div class="row justify-content-center mt-5">
         <div class="col-lg-6 mx-auto">
-          <form method="post" enctype="multipart/form-data">
-            <div class="input-group mb-4 p-2 rounded-pill bg-white shadow-sm">
+          <form method="POST" enctype="multipart/form-data">
+            <div class="input-group mb-4 p-2 rounded-pill">
               <input id="upload" type="file" onchange="readURL(this);" class="form-control">
-              <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+              <label id="upload-label" for="upload" class="fw-normal text-muted">No file chosen</label>
               <div class="input-group-append">
-                <label for="upload" class="btn btn-light rounded-pill"><i class="fas fa-cloud-upload-alt text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                <label for="upload" class="btn btn-light rounded-pill"><i class="fas fa-cloud-upload-alt text-muted"></i><small class="text-uppercase fw-normal text-muted">Choose file</small></label>
               </div>
             </div>
             <p class="fst-italic text-center">The image uploaded will be rendered inside the box below.</p>
             <div class="image-area my-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
-            <button type="submit" class="btn btn-light">Predict</button>
+            <button type="submit" class="btn btn-dark">Predict</button>
           </form>
         </div>
       </div>
@@ -88,10 +89,10 @@
   <!-- Crop Disease End -->
 
   <!-- Footer Section Begin -->
-  <footer class="footer">
+  <footer class="footer text-white">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 text-center text-white">
+        <div class="col-lg-12 text-center">
           <div class="footer-content">
             <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Agraris | All Rights Reserved</p>
           </div>
@@ -102,7 +103,7 @@
   <!-- Footer End -->
 
   <!-- Scroll to Top Section Begin -->
-  <button class="scroll-to-top">
+  <button class="scroll-top rounded-circle">
     <i class="fas fa-arrow-up"></i>
   </button>
   <!-- Scroll to Top End -->
@@ -113,43 +114,7 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-  <script>
-    // Show upload image
-    function readURL(input) {
-      if (input.files && input.files[0]) {
-        const reader = new FileReader();
-
-        reader.onload = function(e) {
-          $('#imageResult')
-            .attr('src', e.target.result);
-        }
-        reader.readAsDataURL(input.files[0]);
-      }
-    }
-
-    $(function () {
-      $('#upload').on('change', function() {
-        readURL(input);
-      })
-    })
-
-    // Show upload image name
-    const input = document.getElementById('upload');
-    const infoArea = document.getElementById('upload-label');
-
-    input.addEventListener('change', showFileName);
-    function showFileName(event) {
-      var input = event.srcElement;
-      var fileName = input.files[0].name;
-      infoArea.textContent = 'File name: ' + fileName;
-    }
-
-    // Scroll to Top
-    const scrollToTop = document.querySelector('.scroll-to-top');
-
-    scrollToTop.addEventListener('click', function() {
-      window.scrollTo(0, 0);
-    }) 
-  </script>
+  <script src="js/script.js"></script>
+  <script src="js/upload.js"></script>
 </body>
 </html>

@@ -6,14 +6,6 @@ p {
   margin: 0;
 }
 
-.mt-6 {
-  margin-top: 5rem;
-}
-
-.pb-6 {
-  padding-bottom: 5rem;
-}
-
 /* Navbar Section */
 
 .navbar {
@@ -22,7 +14,6 @@ p {
 
 .dropdown-menu {
   border: none;
-  background-color: transparent;
   background-color: rgb(27, 25, 25);
 }
 
@@ -39,7 +30,6 @@ p {
 
 .jumbotron {
   background-image: url(../img/jumbotron.jpg);
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -100,9 +90,9 @@ p {
   right: 0;
   bottom: 0;
   height: 50%;
-  background-color: rgba(27, 25, 25, 0.5);
-  backdrop-filter: blur(1rem);
+  background-color: rgba(27, 25, 25, 0.55);
   padding: 1rem;
+  backdrop-filter: blur(1rem);
   transform: translateY(101%);
   transition: transform 0.3s ease-in;
   display: flex;
@@ -142,12 +132,12 @@ p {
 }
 
 .image-gallery a ion-icon {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.55);
   font-size: 30px;
   position: relative;
   z-index: 1;
   padding: 10px 30px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.55);
   border-radius: 4px;
   opacity: 0;
   transition: opacity 0.5s;
@@ -160,7 +150,7 @@ p {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(27, 25, 25, 0.5);
+  background-color: rgba(27, 25, 25, 0.55);
   backdrop-filter: blur(0.5rem);
   opacity: 0;
   transition: opacity 0.5s;
@@ -249,6 +239,10 @@ p {
   background-position: center;
 }
 
+.carousel-inner {
+  padding-bottom: 6rem;
+}
+
 .feedback-quote {
   height: 6rem;
 }
@@ -273,17 +267,15 @@ p {
   margin: auto;
 }
 
-/* Scroll to Top Section */
+/* Scroll Top Section */
 
-.scroll-to-top {
+.scroll-top {
   position: fixed;
   right: 10px;
   bottom: 10px;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  background-color: rgba(27, 25, 25, 0.8);
-  backdrop-filter: blur(1rem);
+  background-color: rgb(27, 25, 25);
   color: rgb(255, 255, 255);
   border: none;
   outline: none;
@@ -319,7 +311,7 @@ p {
   }
 
   .mission-info {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
 
   .card {

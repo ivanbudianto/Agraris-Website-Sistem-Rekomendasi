@@ -1,56 +1,17 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  background-image: url(../img/bg.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   position: relative;
-  min-height: 100%;
-  min-height: 100vh;
-}
-
-p {
-  margin: 0;
-}
-
-.mt-6 {
-  margin-top: 5rem;
-}
-
-.pb-6 {
-  padding-bottom: 5rem;
-}
-
-/* Navbar Section */
-
-.navbar {
-  background-color: rgb(27, 25, 25);
-}
-
-.dropdown-menu {
-  border: none;
-  background-color: transparent;
-  background-color: rgb(27, 25, 25);
-}
-
-.dropdown-item {
-  color: rgba(255, 255, 255, 0.55);
-}
-
-.dropdown-item:hover {
-  color: rgba(255, 255, 255, 0.75);
-  background-color: transparent;
 }
 
 /* Crop Disease Section */
 
 .crop-disease {
-  padding: 3rem 0 11rem 0;
-  background-color: rgba(27, 25, 25, 0.1);
-  backdrop-filter: blur(1rem);
-  min-height: 100%;
+  padding: 3rem 0 13rem 0;
   min-height: 100vh;
+}
+
+.input-group {
+  border: 2px solid rgb(27, 25, 25);
+  border-radius: 0.25rem;
 }
 
 #upload {
@@ -64,19 +25,30 @@ p {
   transform: translateY(-50%);
 }
 
+.input-group-append label {
+  background-color: rgb(226, 230, 234);
+  border-color: rgb(218, 224, 229);
+}
+
+.input-group-append label:hover {
+  background-color: rgb(226, 230, 234);
+  border-color: rgb(218, 224, 229);
+}
+
 .input-group-append i {
   margin-right: 10px;
 } 
 
 .image-area {
   position: relative;
-  border: 2px dashed rgba(255, 255, 255, 0.75);
+  border: 2px dashed rgba(27, 25, 25, 0.75);
+  border-radius: 0.25rem;
   padding: 1rem;
 }
 
 .image-area::before {
   content: 'Uploaded image result';
-  color: rgb(255, 255, 255);
+  color: rgb(27, 25, 25);
   font-weight: bold;
   text-transform: uppercase;
   position: absolute;
@@ -94,8 +66,12 @@ p {
 
 .crop-disease button {
   width: 100%;
-  border-radius: 2rem;
+  background-color: rgb(27, 25, 25);
   font-weight: 500;
+}
+
+.crop-disease button:hover {
+  background-color: rgb(27, 25, 25);
 }
 
 /* Footer Section */
@@ -106,27 +82,4 @@ p {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 5rem;
-  background-color: rgb(27, 25, 25);
-  display: flex;
-}
-
-.footer .container {
-  margin: auto;
-}
-
-/* Scroll to Top Section */
-
-.scroll-to-top {
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgba(27, 25, 25, 0.8);
-  backdrop-filter: blur(1rem);
-  color: rgb(255, 255, 255);
-  border: none;
-  outline: none;
 }
