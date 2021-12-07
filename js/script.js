@@ -1,4 +1,4 @@
-// Scroll Top
+// Scroll top
 const scrollTop = document.querySelector('.scroll-top');
 
 scrollTop.addEventListener('click', function() {
