@@ -22,7 +22,7 @@ const infoArea = document.getElementById('upload-label');
 
 input.addEventListener('change', showFileName);
 function showFileName(e) {
-  var input = e.srcElement;
-  var fileName = input.files[0].name;
+  const input = e.srcElement;
+  const fileName = input.files[0].name;
   infoArea.textContent = 'File name: ' + fileName;
 }
