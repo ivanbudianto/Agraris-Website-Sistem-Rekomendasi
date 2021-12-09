@@ -20,16 +20,16 @@
     </div>
     <div class="row justify-content-center mt-5">
       <div class="col-lg-6 mx-auto">
-        <form method="POST" enctype="multipart/form-data">
+        <form action="{{ url_for('disease_predict') }}" method="POST" enctype="multipart/form-data">
           <div class="input-group mb-4 p-2 rounded-pill">
-            <input id="upload" type="file" onchange="readURL(this);" class="form-control">
-            <label id="upload-label" for="upload" class="fw-normal text-muted">No file chosen</label>
+            <input onchange="readURL(this);" name="file" type="file" id="upload" class="form-control">
+            <label id="upload-label" class="fw-normal text-muted">No file chosen</label>
             <div class="input-group-append">
               <label for="upload" class="btn btn-light rounded-pill"><i class="fas fa-cloud-upload-alt text-muted"></i><small class="text-uppercase fw-normal text-muted">Choose file</small></label>
             </div>
           </div>
           <p class="fst-italic text-center">The image uploaded will be rendered inside the box below.</p>
-          <div class="image-area my-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+          <div class="image-area my-4"><img id="imageResult" src="" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
           <button type="submit" class="btn btn-dark">Predict</button>
         </form>
       </div>

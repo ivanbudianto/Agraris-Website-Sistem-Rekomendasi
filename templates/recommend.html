@@ -22,7 +22,7 @@
     </div>
     <div class="row justify-content-center mt-5">
       <div class="col-lg-6 mx-auto">
-        <form action="#" method="POST">
+        <form action="{{ url_for('recommend_predict') }}" method="POST">
           <div class="form-group mb-4">
             <label for="nitrogen">Nitrogen</label>
             <input type="number" name="nitrogen" id="nitrogen" class="form-control" placeholder="Enter the value" required>
@@ -37,7 +37,7 @@
           </div>
           <div class="form-group mb-4">
             <label for="province">Province</label>
-            <select  onchange="print_city('city', this.selectedIndex);" name="province" id="province" class="form-select" required></select>
+            <select onchange="print_city('city', this.selectedIndex);" name="province" id="province" class="form-select" required></select>
           </div>
           <div class="form-group mb-4">
             <label for="city">City</label>
