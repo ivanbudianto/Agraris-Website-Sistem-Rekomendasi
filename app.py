@@ -32,16 +32,7 @@ def disease_label(result):
 
   for key, value in labels.items():
     if str(result) == key:
-      label_value = value
-
-  with open('models/label_dir/disease_dic_desc.json', 'r') as file:
-    labels = json.load(file)
-
-  for key, value in labels.items():
-    if str(result) == key:
-      desc_value = value
-  
-  return label_value, desc_value
+      return value
 
 # Normalize input range
 def normalization(array_parameter):
@@ -129,9 +120,9 @@ def disease_predict():
     img_path = 'static/uploads/' + file.filename
     file.save(img_path)
     prediction = predict_image(img_path)
-    result, desc = disease_label(prediction)
-    asd = Markup(desc)
-    return render_template('disease-predict.html', prediction=result, description=asd)
+    result = disease_label(prediction)
+    markup = Markup(result)
+    return render_template('disease-predict.html', prediction=markup)
   else:
     return render_template('disease.html')
 
