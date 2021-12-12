@@ -47,7 +47,7 @@ body {
 }
 
 .image-area::before {
-  content: 'Uploaded image result';
+  content: 'Gambar Unggahan';
   color: rgb(27, 25, 25);
   font-weight: bold;
   text-transform: uppercase;
