@@ -92,7 +92,6 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 50%;
   background-color: rgba(27, 25, 25, 0.55);
   padding: 1rem;
   backdrop-filter: blur(1rem);
