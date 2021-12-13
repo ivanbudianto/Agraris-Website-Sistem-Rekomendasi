@@ -40,7 +40,7 @@ c_a[34] = 'Binjai | Gunung Tua | Kabanjahe | Kisaran | Medan | Pandan | Pangurua
 function print_province(province_id) {
   const option_str = document.getElementById(province_id);
   option_str.length = 0;
-	option_str.options[0] = new Option('Select Province','');
+	option_str.options[0] = new Option('Pilih Provinsi','');
 	option_str.selectedIndex = 0;
 	for (let i = 0; i < province_arr.length; i++) {
 		option_str.options[option_str.length] = new Option(province_arr[i], province_arr[i]);
@@ -50,7 +50,7 @@ function print_province(province_id) {
 function print_city(city_id, city_index) {
   const option_str = document.getElementById(city_id);
 	option_str.length = 0;
-	option_str.options[0] = new Option('Select City','');
+	option_str.options[0] = new Option('Pilih Kota','');
 	option_str.selectedIndex = 0;
 	const city_arr = c_a[city_index].split('|');
 	for (let i = 0; i < city_arr.length; i++) {

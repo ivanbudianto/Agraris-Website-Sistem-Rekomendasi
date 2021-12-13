@@ -5,6 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agraris</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/icon/favicon-96x96.png">
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -19,6 +25,9 @@
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/9af64d2009.js" crossorigin="anonymous"></script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- Navbar Section Begin -->
@@ -33,22 +42,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#mission">Mission</a>
+            <a class="nav-link" href="#mission">Misi</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Services
+              Layanan
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="recommend.html">Recommend</a></li>
-              <li><a class="dropdown-item" href="disease.html">Disease</a></li>
+              <li><a class="dropdown-item" href="recommend.html">Rekomendasi Tanaman</a></li>
+              <li><a class="dropdown-item" href="disease.html">Identifikasi Penyakit</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#gallery">Gallery</a>
+            <a class="nav-link" href="#gallery">Galeri</a>
           </li>
         </ul>
       </div>
@@ -59,11 +68,11 @@
   <!-- Jumbotron Section Begin -->
   <section class="jumbotron">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="jumbotron-content text-white animatedFadeInUp fadeInUp">
-            <h2 class="fw-bold">Lorem ipsum dolor sit amet.</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae quos porro reiciendis incidunt consequatur assumenda laborum dolorum dolores delectus placeat. Commodi esse nesciunt atque ad recusandae unde quos corporis odit.</p>
+      <div class="row" style="overflow: hidden;">
+        <div class="col-lg-12" data-aos="fade-up" data-aos-duration="2000">
+          <div class="jumbotron-content text-white">
+            <h2 class="fw-bold">Agraris untuk masa depan pertanian</h2>
+            <p>Gunakan Agraris untuk melakukan pertanian secara modern & efisien dengan pemanfaatan hasil lahan yang optimal, dan bangun pertanian Anda semaksimal mungkin bersama kami.</p>
           </div>
         </div>
       </div>
@@ -77,21 +86,21 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="title text-center">
-            <h3 class="fw-bold">Our Mission</h3>
+            <h3 class="fw-bold">Misi Kami</h3>
           </div>
         </div>
       </div>
-      <div class="row justify-content-center align-items-lg-end mt-5">
-        <div class="col-lg-4">
+      <div class="row justify-content-center align-items-lg-end mt-5" style="overflow: hidden;">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
           <div class="mission-img">
-            <img src="img/mission.jpg" alt="Man holding crate of fresh vegetables">
+            <img src="img/mission.jpg" alt="Petani memegang peti sayuran segar">
           </div>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
           <div class="mission-info">
-            <h4 class="fw-bold">Lorem ipsum dolor sit amet.</h4>
-            <p class="mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa accusantium nulla debitis aliquid pariatur natus eum facilis a maxime voluptas non minima, ab dolores quos dolorum corporis officiis aspernatur autem illo asperiores voluptatem at fuga beatae delectus? Tempore minus, sed ad quibusdam nihil doloribus laboriosam, reprehenderit, laborum ducimus exercitationem dicta.</p>
-            <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem delectus totam omnis repudiandae quaerat cum quam quod nam doloribus repellat ipsa a nostrum minus, excepturi atque voluptate impedit distinctio et. Cumque officia saepe quaerat fugit, voluptatem commodi dicta accusantium nulla sunt doloribus, exercitationem ea ut accusamus eligendi tempora cum.</p>
+            <h4 class="fw-bold">Solusi Tepat, Tertujukan Hanya Untuk Anda</h4>
+            <p class="mt-2">Produktivitas tinggi dengan biaya yang rendah adalah harapan dari seluruh petani. Produktivitas lahan dan pemilihan tanaman adalah kedua hal yang tak terbantahkan. Agraris adalah situs utilitas yang dapat membantu Anda dalam meningkatkan peluang produktivitas lahan dengan menemukan tanaman terbaik berdasarkan faktor lingkungan di daerah Anda. </p>
+            <p class="mt-2">Hama pada tanaman juga tidak lepas dari pandangan kami. Terlalu banyak kasus kegagalan panen karena kesulitan Anda maupun rekan Anda dalam mengidentifikasi penyakit pada tanaman dengan mudah. Maka dari itu, kami membuat terobosan baru. Hanya dengan mengambil foto daun tanaman Anda, prediksi. Tangani. Selesaikan.</p>
           </div>
         </div>
       </div>
@@ -105,35 +114,35 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="title text-center text-white">
-            <h3 class="fw-bold">Our Services</h3>
+            <h3 class="fw-bold">Layanan Kami</h3>
           </div>
         </div>
       </div>
-      <div class="row justify-content-center mt-5">
-        <div class="col-lg-4">
+      <div class="row justify-content-center mt-5" style="overflow: hidden;">
+        <div class="col-lg-4" data-aos="fade-down" data-aos-duration="1000">
           <a class="text-decoration-none" href="recommend.html">
-            <div class="card border-0">
-              <img src="img/recommend.jpg" class="card-img-top" alt="Farmer analyzes his land">
+            <div class="card border-0 rounded-0">
+              <img src="img/recommend.jpg" class="card-img-top" alt="Petani menganalisis tanahnya">
               <div class="card-body">
-                <h5 class="fw-bold text-center">Crop Recommendation</h5>
+                <h5 class="fw-bold text-center">Rekomendasi Tanaman</h5>
               </div>
               <div class="card-info">
-                <h5 class="fw-bold">Crop Recommendation</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae culpa ipsum fugiat ratione, eum eos autem laboriosam ipsam tenetur nisi.</p>
+                <h5 class="fw-bold">Rekomendasi Tanaman</h5>
+                <p class="card-text">Temukan tanaman rekomendasi terbaik Anda berdasarkan faktor lingkungan di daerah Anda seperti Nitrogen, Fosfor, Kalium, Suhu, Kelembaban, pH, dan Curah Hujan.</p>
               </div>
             </div>
           </a>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="fade-down" data-aos-duration="1000">
           <a class="text-decoration-none" href="disease.html">
-            <div class="card border-0">
-              <img src="img/disease.jpg" class="card-img-top" alt="Farmer using cell phone in cornfield">
+            <div class="card border-0 rounded-0">
+              <img src="img/disease.jpg" class="card-img-top" alt="Petani menggunakan ponsel di ladang jagung">
               <div class="card-body">
-                <h5 class="fw-bold text-center">Crop Disease</h5>
+                <h5 class="fw-bold text-center">Identifikasi Penyakit</h5>
               </div>
               <div class="card-info">
-                <h5 class="fw-bold">Crop Disease</h5>
-                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed tempora dolorem perspiciatis dolor sequi error placeat provident soluta adipisci odio.</p>
+                <h5 class="fw-bold">Identifikasi Penyakit</h5>
+                <p class="card-text">Layanan kami akan membantu Anda menemukan penyakit pada tanaman Anda dengan mudah hanya dengan mengunggah foto pada tanaman Anda dan Anda akan mendapatkan hasilnya.</p>
               </div>
             </div>
           </a>
@@ -149,48 +158,48 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="title text-center">
-            <h3 class="fw-bold">Gallery</h3>
+            <h3 class="fw-bold">Galeri</h3>
           </div>
         </div>
       </div>
-      <div class="image-gallery mt-6">
-        <a href="img/gallery/apple.jpg" class="fancybox img-1" data-fancybox="gallery">
+      <div class="image-gallery mt-5" style="overflow: hidden;">
+        <a href="img/gallery/apple.jpg" class="fancybox img-1" data-fancybox="gallery" data-aos="fade-down" data-aos-duration="1000">
           <ion-icon name="scan-outline"></ion-icon>
         </a>
-        <a href="img/gallery/blueberry.jpg" class="fancybox img-2" data-fancybox="gallery">
+        <a href="img/gallery/blueberry.jpg" class="fancybox img-2" data-fancybox="gallery" data-aos="fade-down" data-aos-duration="1000">
           <ion-icon name="scan-outline"></ion-icon>
         </a>
-        <a href="img/gallery/cherry.jpg" class="fancybox img-3" data-fancybox="gallery">
+        <a href="img/gallery/cherry.jpg" class="fancybox img-3" data-fancybox="gallery" data-aos="fade-down" data-aos-duration="1000">
           <ion-icon name="scan-outline"></ion-icon>
         </a>
-        <a href="img/gallery/corn.jpg" class="fancybox img-4" data-fancybox="gallery">
+        <a href="img/gallery/corn.jpg" class="fancybox img-4" data-fancybox="gallery" data-aos="fade-down" data-aos-duration="1000">
           <ion-icon name="scan-outline"></ion-icon>
         </a>
-        <a href="img/gallery/grape.jpg" class="fancybox img-5" data-fancybox="gallery">
+        <a href="img/gallery/grape.jpg" class="fancybox img-5" data-fancybox="gallery" data-aos="fade-down" data-aos-duration="1000">
           <ion-icon name="scan-outline"></ion-icon>
         </a>
-        <a href="img/gallery/orange.jpg" class="fancybox img-6" data-fancybox="gallery">
+        <a href="img/gallery/orange.jpg" class="fancybox img-6" data-fancybox="gallery" data-aos="fade-down" data-aos-duration="1000">
           <ion-icon name="scan-outline"></ion-icon>
         </a>
-        <a href="img/gallery/peach.jpg" class="fancybox img-7" data-fancybox="gallery">
+        <a href="img/gallery/peach.jpg" class="fancybox img-7" data-fancybox="gallery" data-aos="fade-down" data-aos-duration="1000">
           <ion-icon name="scan-outline"></ion-icon>
         </a>
-        <a href="img/gallery/potato.jpg" class="fancybox img-8" data-fancybox="gallery">
+        <a href="img/gallery/potato.jpg" class="fancybox img-8" data-fancybox="gallery" data-aos="fade-down" data-aos-duration="1000">
           <ion-icon name="scan-outline"></ion-icon>
         </a>
-        <a href="img/gallery/raspberry.jpg" class="fancybox img-9" data-fancybox="gallery">
+        <a href="img/gallery/raspberry.jpg" class="fancybox img-9" data-fancybox="gallery" data-aos="fade-down" data-aos-duration="1000">
           <ion-icon name="scan-outline"></ion-icon>
         </a>
-        <a href="img/gallery/sonybean.jpg" class="fancybox img-10" data-fancybox="gallery">
+        <a href="img/gallery/sonybean.jpg" class="fancybox img-10" data-fancybox="gallery" data-aos="fade-down" data-aos-duration="1000">
           <ion-icon name="scan-outline"></ion-icon>
         </a>
-        <a href="img/gallery/squash.jpg" class="fancybox img-11" data-fancybox="gallery">
+        <a href="img/gallery/squash.jpg" class="fancybox img-11" data-fancybox="gallery" data-aos="fade-down" data-aos-duration="1000">
           <ion-icon name="scan-outline"></ion-icon>
         </a>
-        <a href="img/gallery/strawberry.jpg" class="fancybox img-12" data-fancybox="gallery">
+        <a href="img/gallery/strawberry.jpg" class="fancybox img-12" data-fancybox="gallery" data-aos="fade-down" data-aos-duration="1000">
           <ion-icon name="scan-outline"></ion-icon>
         </a>
-        <a href="img/gallery/tomato.jpg" class="fancybox img-13" data-fancybox="gallery">
+        <a href="img/gallery/tomato.jpg" class="fancybox img-13" data-fancybox="gallery" data-aos="fade-down" data-aos-duration="1000">
           <ion-icon name="scan-outline"></ion-icon>
         </a>
       </div>
@@ -204,7 +213,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="title text-center">
-            <h3 class="fw-bold">What People Says</h3>
+            <h3 class="fw-bold">Testimoni Pengguna</h3>
           </div>
         </div>
       </div>
@@ -220,30 +229,30 @@
               <div class="carousel-item active">
                 <figure class="feedback-quote text-center">
                   <blockquote class="blockquote">
-                    <p class="fst-italic lead"><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora facere quasi quod autem dolores necessitatibus molestiae modi, voluptatibus quisquam atque.</p>
+                    <p class="fst-italic lead"><i class="fas fa-quote-left"></i>Saya tidak pernah menemukan situs pertanian yang begitu mudah digunakan dan dapat membantu saya dalam memilih tanaman yang tepat untuk pertanian saya.</p>
                   </blockquote>
                   <figcaption class="blockquote-footer mt-1">
-                    Lorem ipsum
+                    Deddy Corbizer
                   </figcaption>
                 </figure>
               </div>
               <div class="carousel-item">
                 <figure class="feedback-quote text-center">
                   <blockquote class="blockquote">
-                    <p class="fst-italic lead"><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum amet soluta unde voluptatum natus odit placeat dolorem blanditiis aspernatur labore.</p>
+                    <p class="fst-italic lead"><i class="fas fa-quote-left"></i>Jika bukan karena Agraris, bisnis saya akan hancur karena saya telah menanam tanaman yang salah berkali-kali.</p>
                   </blockquote>
                   <figcaption class="blockquote-footer mt-1">
-                    Lorem ipsum
+                    Ayu Tang-Tung
                   </figcaption>
                 </figure>
               </div>
               <div class="carousel-item">
                 <figure class="feedback-quote text-center">
                   <blockquote class="blockquote">
-                    <p class="fst-italic lead"><i class="fas fa-quote-left"></i>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum mollitia at ratione sunt facilis! Eos expedita eum odit ad explicabo.</p>
+                    <p class="fst-italic lead"><i class="fas fa-quote-left"></i>Penyakit tanaman sangat membantu saya karena saya menemukan tanaman saya mulai mengeluarkan penyakit aneh dan saya hanya dapat menemukan maknanya melalui Agraris.</p>
                   </blockquote>
                   <figcaption class="blockquote-footer mt-1">
-                    Lorem ipsum
+                    Andmesh Kilangan
                   </figcaption>
                 </figure>
               </div>
@@ -261,7 +270,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <div class="footer-content">
-            <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Agraris | All Rights Reserved</p>
+            <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Agraris. All Rights Reserved.</p>
           </div>
         </div>
       </div>
@@ -281,6 +290,12 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true
+    });
+  </script>
   <script src="js/script.js"></script>
 </body>
 </html>

@@ -30,6 +30,7 @@ p {
 
 .jumbotron {
   background-image: url(../img/jumbotron.jpg);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -43,8 +44,6 @@ p {
 
 .jumbotron-content {
   width: 50%;
-  animation-duration: 4s;
-  animation-fill-mode: both;
 }
 
 /* Add Padding */
@@ -57,6 +56,10 @@ p {
 }
 
 /* Mission Section */
+
+.mission {
+  background-color: rgb(246, 250, 247);
+}
 
 .mission-img img {
   width: 100%;
@@ -89,7 +92,6 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 50%;
   background-color: rgba(27, 25, 25, 0.55);
   padding: 1rem;
   backdrop-filter: blur(1rem);
@@ -105,6 +107,10 @@ p {
 }
 
 /* Gallery Section */
+
+.gallery {
+  background-color: rgb(246, 250, 247);
+}
 
 .image-gallery {
   display: grid;
@@ -279,28 +285,11 @@ p {
   color: rgb(255, 255, 255);
   border: none;
   outline: none;
+  transition: 0.3s ease-in;
 }
 
-/* Animation */
-
-@keyframes fadeInUp {
-  from {
-    transform: translate3d(0, 80px, 0)
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1
-  }
-}
-
-.animatedFadeInUp {
-  opacity: 0
-}
-
-.fadeInUp {
-  opacity: 0;
-  animation-name: fadeInUp;
+.scroll-top:hover {
+  background-color: rgb(97, 111, 57);
 }
 
 /* Responsive Breakpoint */
