@@ -1,0 +1,7 @@
+flask==2.0.2
+numpy==1.21.4
+requests==2.26.0
+pillow==8.4.0
+tensorflow-cpu==2.7.0
+gunicorn==20.1.0
+
