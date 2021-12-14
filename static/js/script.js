@@ -1,6 +1,18 @@
 // Scroll top
-const scrollTop = document.querySelector('.scroll-top');
+const scrollBtn = document.querySelector('.scroll-top');
 
-scrollTop.addEventListener('click', function() {
+window.onscroll = function() {
+  scrollFunction()
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+}
+
+scrollBtn.addEventListener('click', function() {
   window.scrollTo(0, 0);
 })

@@ -276,6 +276,7 @@ p {
 /* Scroll Top Section */
 
 .scroll-top {
+  display: none;
   position: fixed;
   right: 10px;
   bottom: 10px;
@@ -289,7 +290,7 @@ p {
 }
 
 .scroll-top:hover {
-  background-color: rgb(97, 111, 57)
+  background-color: rgb(97, 111, 57);
 }
 
 /* Responsive Breakpoint */
