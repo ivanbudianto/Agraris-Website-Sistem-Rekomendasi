@@ -11,7 +11,7 @@
 </p>
 <br>
 <p align='center'>
-    <img src ="static\img\thumbnail.jpg" alt="A green farm with sunlight">
+    <img src ="readme_thumbnail/thumbnail.jpg" alt="A green farm with sunlight">
 </p>
 
 <br>
