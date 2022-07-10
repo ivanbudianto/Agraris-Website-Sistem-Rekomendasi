@@ -1,0 +1,23 @@
+/* Predicted Plant Disease Section */
+
+.predicted-plant-disease {
+  padding: 3rem 0 13rem 0;
+  min-height: 100vh;
+  background-color: rgb(246, 250, 247);
+}
+
+.predicted-info {
+  padding: 1rem;
+  border: 2px dashed rgba(27, 25, 25, 0.55);
+  border-radius: 0.25rem;
+}
+
+.predicted-plant-disease button {
+  width: 100%;
+  font-weight: 500;
+  background-color: rgb(27, 25, 25);
+}
+
+.predicted-plant-disease button:hover {
+  background-color: rgb(27, 25, 25);
+}

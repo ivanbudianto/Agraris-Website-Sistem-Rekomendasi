@@ -1,0 +1,42 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Agraris - Identifikasi Penyakit{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="../static/css/plant-disease.css">
+{% endblock %}
+
+{% block content %}
+<!-- Plant Disease Section Begin -->
+<div class="plant-disease">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h3 class="fw-bold fs-4 mb-5">Identifikasi Penyakit</h3>
+        <img src="../static/img/image.svg" alt="Image" width="150">
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 mx-auto">
+        <form action="{{ url_for('predicted_plant_disease') }}" enctype="multipart/form-data" method="POST">
+          <div class="input-group bg-white p-2 mb-4">
+            <input onchange="readURL(this);" type="file" name="file" id="upload" class="form-control">
+            <label id="upload-label" class="fw-normal text-muted"></label>
+            <div class="input-group-append">
+              <label class="btn btn-light" for="upload"><i class="fas fa-cloud-upload-alt text-muted"></i><small class="text-uppercase fw-normal text-muted">Pilih Gambar</small></label>
+            </div>
+          </div>
+          <p class="fst-italic text-center">Gambar yang diunggah akan ditampilkan pada kotak dibawah ini.</p>
+          <div class="image-area bg-white my-4"><img id="imageResult" src="" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+          <button type="submit" class="btn btn-dark">Identifikasi</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Plant Disease End -->
+{% endblock %}
+
+{% block javascripts %}
+<script src="../static/js/upload.js"></script>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Agraris - Identifikasi Penyakit{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="../static/css/predicted-disease.css">
+{% endblock %}
+
+{% block content %}
+<!-- Predicted Plant Disease Section Begin -->
+<section class="predicted-plant-disease">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h3 class="fw-bold fs-4">Identifikasi Penyakit</h3>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="predicted-info bg-white mb-4">
+          {{ prediction }}
+        </div>
+        <a class="text-decoration-none" href="{{ url_for('plant_disease') }}">
+          <button type="button" class="btn btn-dark">Kembali</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Predicted Plant Disease End -->
+{% endblock %}

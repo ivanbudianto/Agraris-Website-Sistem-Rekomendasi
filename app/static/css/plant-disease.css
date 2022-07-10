@@ -1,0 +1,72 @@
+/* Plant Disease Section */
+
+.plant-disease {
+  padding: 3rem 0 13rem 0;
+  min-height: 100vh;
+  background-color: rgb(246, 250, 247);
+}
+
+.input-group {
+  border: 1px solid rgb(206, 212, 218);
+  border-radius: 0.25rem;
+}
+
+#upload {
+  opacity: 0;
+}
+
+#upload-label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.input-group-append label {
+  background-color: rgb(226, 230, 234);
+  border-color: rgb(218, 224, 229);
+}
+
+.input-group-append label:hover {
+  background-color: rgb(226, 230, 234);
+  border-color: rgb(218, 224, 229);
+}
+
+.input-group-append i {
+  margin-right: 10px;
+} 
+
+.image-area {
+  position: relative;
+  border: 2px dashed rgba(27, 25, 25, 0.75);
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+.image-area::before {
+  content: 'Gambar Unggahan';
+  color: rgb(27, 25, 25);
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+.image-area img {
+  position: relative;
+  z-index: 2;
+}
+
+.plant-disease button {
+  width: 100%;
+  font-weight: 500;
+  background-color: rgb(27, 25, 25);
+}
+
+.plant-disease button:hover {
+  background-color: rgb(27, 25, 25);
+}

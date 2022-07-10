@@ -1,0 +1,31 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Agraris - Rekomendasi Tanaman{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="../static/css/predicted-recommendation.css">
+{% endblock %}
+
+{% block content %}
+<!-- Predicted Crop Recommendation Section Begin -->
+<div class="predicted-crop-recommendation">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h3 class="fw-bold fs-4">Rekomendasi Tanaman</h3>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="predicted-info bg-white text-center mb-4">
+          <p class="fs-5 mb-0">Tanaman rekomendasi untuk lahan Anda adalah <span class="fw-bold">{{ prediction }}</span>.</p>
+        </div>
+        <a class="text-decoration-none" href="{{ url_for('crop_recommendation') }}">
+          <button type="button" class="btn btn-dark">Kembali</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Predicted Crop Recommendation End -->
+{% endblock %}

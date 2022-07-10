@@ -1,0 +1,60 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Agraris - Rekomendasi Tanaman{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="../static/css/crop-recommendation.css">
+<script src="../static/js/cities.js"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Crop Recommendation Section Begin -->
+<div class="crop-recommendation">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h3 class="fw-bold fs-4">Rekomendasi Tanaman</h3>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 mx-auto">
+        <form action="{{ url_for('predicted_crop_recommendation') }}" method="POST">
+          <div class="form-group mb-4">
+            <label class="mb-1" for="nitrogen">Nitrogen</label>
+            <input type="number" name="nitrogen" id="nitrogen" class="form-control" placeholder="Masukkan nilai Nitrogen" required>
+          </div>
+          <div class="form-group mb-4">
+            <label class="mb-1" for="phosphorous">Fosfor</label>
+            <input type="number" name="phosphorous" id="phosphorous" class="form-control" placeholder="Masukkan nilai Fosfor" required>
+          </div>
+          <div class="form-group mb-4">
+            <label class="mb-1" for="potassium">Kalium</label>
+            <input type="number" name="potassium" id="potassium" class="form-control" placeholder="Masukkan nilai Kalium" required>
+          </div>
+          <div class="form-group mb-4">
+            <label class="mb-1" for="province">Provinsi</label>
+            <select onchange="print_city('city', this.selectedIndex);" name="province" id="province" class="form-select" required></select>
+          </div>
+          <div class="form-group mb-4">
+            <label class="mb-1" for="city">Kota</label>
+            <select name="city" id="city" class="form-select" required></select>
+            <script type="text/javascript" language="javascript">
+              print_province("province");
+            </script>
+          </div>
+          <div class="form-group mb-4">
+            <label class="mb-1" for="ph">pH</label>
+            <input type="number" name="ph" id="ph" class="form-control" placeholder="Masukkan nilai pH" required>
+          </div>
+          <div class="form-group mb-4">
+            <label class="mb-1" for="rainfall">Curah Hujan</label>
+            <input type="number" name="rainfall" id="rainfall" class="form-control" placeholder="Masukkan nilai Curah Hujan" required>
+          </div>
+          <button type="submit" class="btn btn-dark">Cari Rekomendasi</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Crop Recommendation End -->
+{% endblock %}

@@ -1,0 +1,198 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Agraris{% endblock %}
+
+{% block content %}
+<!-- Jumbotron Section Begin -->
+<div class="jumbotron d-flex">
+  <div class="container my-auto">
+    <div class="row" style="overflow: hidden;">
+      <div class="col-lg-12" data-aos="fade-up" data-aos-duration="2000">
+        <div class="jumbotron-content text-white">
+          <h2 class="fw-bold fs-2">Agraris untuk masa depan pertanian</h2>
+          <p class="mb-0">Gunakan Agraris untuk melakukan pertanian secara modern & efisien dengan pemanfaatan hasil lahan yang optimal, dan bangun pertanian Anda semaksimal mungkin bersama kami.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Jumbotron End -->
+
+<!-- Mission Section Begin -->
+<div class="mission" id="mission">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h3 class="fw-bold fs-4">Misi Kami</h3>
+      </div>
+    </div>
+    <div class="row align-items-end" style="overflow: hidden;">
+      <div class="col-lg-6" data-aos="fade-right" data-aos-duration="2000">
+        <div class="mission-img">
+          <img src="../static/img/mission.jpg" alt="Petani memegang peti sayuran segar">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="mission-info">
+          <h4 class="fw-bold fs-5 mb-3">Solusi Tepat, Tertujukan Hanya Untuk Anda</h4>
+          <p class="mb-2">Produktivitas tinggi dengan biaya yang rendah adalah harapan dari seluruh petani. Produktivitas lahan dan pemilihan tanaman adalah kedua hal yang tak terbantahkan. Agraris adalah situs utilitas yang dapat membantu Anda dalam meningkatkan peluang produktivitas lahan dengan menemukan tanaman terbaik berdasarkan faktor lingkungan di daerah Anda.</p>
+          <p class="mb-0">Hama pada tanaman juga tidak lepas dari pandangan kami. Terlalu banyak kasus kegagalan panen karena kesulitan Anda maupun rekan Anda dalam mengidentifikasi penyakit pada tanaman dengan mudah. Maka dari itu, kami membuat terobosan baru. Hanya dengan mengambil foto daun tanaman Anda, prediksi. Tangani. Selesaikan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Mission End -->
+
+<!-- Services Section Begin -->
+<div class="services" id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h3 class="fw-bold fs-4 text-white">Layanan Kami</h3>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-4">
+        <a class="text-decoration-none" href="{{ url_for('crop_recommendation') }}">
+          <div class="card border-0 rounded-0">
+            <img src="../static/img/recommendation.jpg" class="card-img-top" alt="Petani menganalisis tanahnya">
+            <div class="card-body">
+              <h5 class="fw-bold fs-5 text-center">Rekomendasi Tanaman</h5>
+            </div>
+            <div class="card-info">
+              <h5 class="fw-bold fs-5">Rekomendasi Tanaman</h5>
+              <p class="mb-0">Temukan tanaman rekomendasi terbaik Anda berdasarkan faktor lingkungan di daerah Anda seperti Nitrogen, Fosfor, Kalium, Suhu, Kelembaban, pH, dan Curah Hujan.</p>
+            </div>
+        </a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <a class="text-decoration-none" href="{{ url_for('plant_disease') }}">
+          <div class="card border-0 rounded-0">
+            <img src="../static/img/disease.jpg" class="card-img-top" alt="Petani menggunakan ponsel di ladang jagung">
+            <div class="card-body">
+              <h5 class="fw-bold fs-5 text-center">Identifikasi Penyakit</h5>
+            </div>
+            <div class="card-info">
+              <h5 class="fw-bold fs-5">Identifikasi Penyakit</h5>
+              <p class="mb-0">Layanan kami akan membantu Anda menemukan penyakit pada tanaman Anda dengan mudah hanya dengan mengunggah foto pada tanaman Anda dan Anda akan mendapatkan hasilnya.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Services End -->
+
+<!-- Gallery Section Begin -->
+<div class="gallery" id="gallery">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h3 class="fw-bold fs-4">Galeri</h3>
+      </div>
+    </div>
+    <div class="image-gallery" style="overflow: hidden;">
+      <a href="../static/img/gallery/apple.jpg" class="fancybox img-1" data-fancybox="gallery" data-aos="zoom-in" data-aos-duration="1000">
+        <ion-icon name="scan-outline"></ion-icon>
+      </a>
+      <a href="../static/img/gallery/blueberry.jpg" class="fancybox img-2" data-fancybox="gallery" data-aos="zoom-in" data-aos-duration="1000">
+        <ion-icon name="scan-outline"></ion-icon>
+      </a>
+      <a href="../static/img/gallery/cherry.jpg" class="fancybox img-3" data-fancybox="gallery" data-aos="zoom-in" data-aos-duration="1000">
+        <ion-icon name="scan-outline"></ion-icon>
+      </a>
+      <a href="../static/img/gallery/corn.jpg" class="fancybox img-4" data-fancybox="gallery" data-aos="zoom-in" data-aos-duration="1000">
+        <ion-icon name="scan-outline"></ion-icon>
+      </a>
+      <a href="../static/img/gallery/grape.jpg" class="fancybox img-5" data-fancybox="gallery" data-aos="zoom-in" data-aos-duration="1000">
+        <ion-icon name="scan-outline"></ion-icon>
+      </a>
+      <a href="../static/img/gallery/orange.jpg" class="fancybox img-6" data-fancybox="gallery" data-aos="zoom-in" data-aos-duration="1000">
+        <ion-icon name="scan-outline"></ion-icon>
+      </a>
+      <a href="../static/img/gallery/peach.jpg" class="fancybox img-7" data-fancybox="gallery" data-aos="zoom-in" data-aos-duration="1000">
+        <ion-icon name="scan-outline"></ion-icon>
+      </a>
+      <a href="../static/img/gallery/potato.jpg" class="fancybox img-8" data-fancybox="gallery" data-aos="zoom-in" data-aos-duration="1000">
+        <ion-icon name="scan-outline"></ion-icon>
+      </a>
+      <a href="../static/img/gallery/raspberry.jpg" class="fancybox img-9" data-fancybox="gallery" data-aos="zoom-in" data-aos-duration="1000">
+        <ion-icon name="scan-outline"></ion-icon>
+      </a>
+      <a href="../static/img/gallery/sonybean.jpg" class="fancybox img-10" data-fancybox="gallery" data-aos="zoom-in" data-aos-duration="1000">
+        <ion-icon name="scan-outline"></ion-icon>
+      </a>
+      <a href="../static/img/gallery/squash.jpg" class="fancybox img-11" data-fancybox="gallery" data-aos="zoom-in" data-aos-duration="1000">
+        <ion-icon name="scan-outline"></ion-icon>
+      </a>
+      <a href="../static/img/gallery/strawberry.jpg" class="fancybox img-12" data-fancybox="gallery" data-aos="zoom-in" data-aos-duration="1000">
+        <ion-icon name="scan-outline"></ion-icon>
+      </a>
+      <a href="../static/img/gallery/tomato.jpg" class="fancybox img-13" data-fancybox="gallery" data-aos="zoom-in" data-aos-duration="1000">
+        <ion-icon name="scan-outline"></ion-icon>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- Gallery End -->
+
+<!-- Feedback Section Begin -->
+<div class="feedback text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-5">
+        <h3 class="fw-bold fs-4">Testimoni Pengguna</h3>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 mx-auto">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators mb-0">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <figure class="feedback-quote text-center">
+                <blockquote class="blockquote">
+                  <p class="fst-italic lead mb-0"><i class="fa-solid fa-quote-left"></i>Saya tidak pernah menemukan situs pertanian yang begitu mudah digunakan dan dapat membantu saya dalam memilih tanaman yang tepat untuk pertanian saya.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer mt-1">Marwan Good</figcaption>
+              </figure>
+            </div>
+            <div class="carousel-item">
+              <figure class="feedback-quote text-center">
+                <blockquote class="blockquote">
+                  <p class="fst-italic lead mb-0"><i class="fa-solid fa-quote-left"></i>Jika bukan karena Agraris, bisnis saya akan hancur karena saya telah menanam tanaman yang salah berkali-kali.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer mt-1">Haydn Gardiner</figcaption>
+              </figure>
+            </div>
+            <div class="carousel-item">
+              <figure class="feedback-quote text-center">
+                <blockquote class="blockquote">
+                  <p class="fst-italic lead mb-0"><i class="fa-solid fa-quote-left"></i>Penyakit tanaman sangat membantu saya karena saya menemukan tanaman saya mulai mengeluarkan penyakit aneh dan saya hanya dapat menemukan maknanya melalui Agraris.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer mt-1">Pearl Griffith</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Feedback End -->
+{% endblock %}
+
+{% block javascripts %}
+<script>
+  AOS.init({
+    once: true
+  });
+</script>
+{% endblock %}

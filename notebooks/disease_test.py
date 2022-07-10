@@ -21,12 +21,11 @@ def predict_image(path):
 
   predictions = model.predict(img_array)
   score = tf.nn.softmax(predictions[0])
-  
+
   return np.argmax(predictions)
 
 # Function to cast numeric label back to wordish prediction
 def cast_label(result):
-
   with open('disease_dic.json', 'r') as file:
     labels = json.load(file)
 
